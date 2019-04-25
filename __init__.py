@@ -10,10 +10,10 @@ class RoomsLocation(MycroftSkill):
 
     @intent_handler(IntentBuilder("").require("querry").require("Room"))
     def handle_departments_focus(self, message):
-        if message.data["Room"] == "bathroom":
-            self.speak_dialog('bathroom.location')
-        elif message.data["Room"] == "bedroom":
-            self.speak_dialog('Bedroom.location')
+        if message.data["equipe"] == "SAP":
+            self.speak_dialog('sap.location')
+        elif message.data["equipe"] == "SAP SUPPORT":
+            self.speak_dialog('sapsup.location')
 
 def create_skill():
     return RoomsLocation()
